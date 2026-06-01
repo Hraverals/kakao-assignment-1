@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미니멀 Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="week-navigation">
+                <button id="prev-week-btn" class="nav-btn">&lt;</button>
+                <h2 id="current-month-display">로딩 중...</h2>
+                <button id="next-week-btn" class="nav-btn">&gt;</button>
+            </div>
+            
+            <!-- 주간 날짜 뷰 -->
+            <div id="week-view" class="week-view">
+                <!-- JS에서 요일/날짜가 렌더링됩니다 -->
+            </div>
+        </header>
+        
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="선택된 날짜의 할 일을 입력하세요...">
+            <button id="add-button" class="btn-primary">추가</button>
+        </div>
+        <p id="error-message" class="error-message">할 일을 입력해주세요.</p>
+
+        <!-- 필터 탭 영역 -->
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="active">진행 중</button>
+            <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list">
+            <!-- Todo 항목들이 여기에 추가됩니다 -->
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
